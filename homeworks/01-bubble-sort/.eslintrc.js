@@ -1,0 +1,57 @@
+module.exports = {
+  env: {
+    browser: true,
+    es6: true,
+    jest: true,
+  },
+  extends: [
+    'plugin:react/recommended',
+    'airbnb',
+  ],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
+  plugins: [
+    'react',
+    '@typescript-eslint',
+  ],
+  rules: {
+    quotes: "off",
+    indent: "off",
+    "max-len": ["error", {
+      "code": 140,
+      "comments": 0,
+      "ignorePattern": `^import |//|"[^"]{100,}"`,
+    }],
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "no-use-before-define": "off",
+    "react/jsx-indent": "off",
+    "react/jsx-tag-spacing": "off",
+    "react/button-has-type": "off",
+    "react/jsx-filename-extension": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "warn",
+    "react/jsx-one-expression-per-line": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-expressions": ["error", { allowTernary: true }],
+    "arrow-body-style": "off",
+    "no-mixed-operators": "off",
+    "no-plusplus": "off",
+    "react/prop-types": "off",
+    "react/no-array-index-key": "off",
+    "implicit-arrow-linebreak": "off",
+    "object-curly-newline": "off",
+    "no-param-reassign": "off",
+  },
+};
